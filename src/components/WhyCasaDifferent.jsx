@@ -40,7 +40,7 @@ export default function WhyCasaDifferent() {
                 </p>
               </div>
             </div>
-            <div className="bg-white p-4 rounded-lg">
+            <div className="flex-1 flex flex-col justify-between">
               <Chart />
             </div>
           </div>
