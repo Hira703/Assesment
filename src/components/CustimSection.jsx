@@ -9,29 +9,29 @@ export default function CasaServiceSection() {
       {/* Main container */}
       <div className="max-w-[1440px] mx-auto px-4 md:px-8 flex flex-col py-12 gap-12">
         {/* Top Hero Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-          {/* Left Side */}
-          <div>
-            <span className="inline-block bg-[#DFEDE3] text-[#0F4E23] text-sm rounded-full mb-4 px-3 py-1">
-              About Casa Service
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-4">
-              Revolutionizing Cash Flow <br /> for Business Owners!
-            </h2>
-          </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-6">
+  {/* Left Side */}
+  <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+    <span className="inline-block bg-[#DFEDE3] text-[#0F4E23] text-sm rounded-full mb-4 px-3 py-1">
+      About Casa Service
+    </span>
+    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-4">
+      Revolutionizing Cash Flow <br /> for Business Owners!
+    </h2>
+  </div>
 
-          {/* Right Side */}
-          <div className="flex flex-col justify-center">
-            <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-4">
-              Empowering businesses with faster cash access, CASA provides a
-              secure, fast, and flexible solution to get early payments for
-              credit card sales.
-            </p>
-            <button className="w-fit py-2 px-4 bg-[#0F4E23] text-white rounded-full hover:bg-green-800 transition">
-              Join Now
-            </button>
-          </div>
-        </div>
+  {/* Right Side */}
+  <div className="flex flex-col items-center lg:items-start text-center lg:text-left justify-center">
+    <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-4">
+      Empowering businesses with faster cash access, CASA provides a secure,
+      fast, and flexible solution to get early payments for credit card sales.
+    </p>
+    <button className="w-fit py-2 px-4 bg-[#0F4E23] text-white rounded-full hover:bg-green-800 transition">
+      Join Now
+    </button>
+  </div>
+</div>
+
 
         {/* Features Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">

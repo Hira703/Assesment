@@ -7,19 +7,21 @@ export default function HowItWorksSection() {
     <section className="w-full bg-[#F8F8F8] py-16">
       <div className="w-[90%] max-w-6xl mx-auto flex flex-col gap-12">
         {/* Header Section */}
-        <div className="text-center flex flex-col items-center gap-4">
-          <span className="inline-block bg-[#DFEDE3] text-[#0F4E23] text-sm px-4 py-1 rounded-full">
-            How it works
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-            Simple & Fast — Receive Your <br /> Payment in 3 Steps!
-          </h2>
-          <p className="text-base md:text-lg text-gray-600 max-w-2xl">
-            Empowering businesses with faster cash access, CASA provides a
-            secure, fast, and flexible solution to get early payments for credit
-            card sales.
-          </p>
-        </div>
+      
+<div className="flex flex-col items-center justify-center gap-4 text-center min-h-[50vh] md:min-h-0">
+  <span className="inline-block bg-[#DFEDE3] text-[#0F4E23] text-sm px-4 py-1 rounded-full">
+    How it works
+  </span>
+  <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+    Simple & Fast — Receive Your <br /> Payment in 3 Steps!
+  </h2>
+  <p className="text-base md:text-lg text-gray-600 max-w-2xl">
+    Empowering businesses with faster cash access, CASA provides a
+    secure, fast, and flexible solution to get early payments for credit
+    card sales.
+  </p>
+</div>
+
 
         {/* Steps Section */}
         <div className="flex flex-col md:flex-row gap-6">

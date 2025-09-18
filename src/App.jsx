@@ -22,17 +22,17 @@ import ContactSectionOverlapping from './components/ContactSection';
 export default function App() {
   return (
     <div >
-     <Header></Header>
+      <Header></Header>
       <CasaServiceSection></CasaServiceSection>
       <HowItWorksSection></HowItWorksSection>
       <WhyCasaDifferent></WhyCasaDifferent>
       <CustomerReviews></CustomerReviews>
-    <Pricing></Pricing>
-   <ContactSectionOverlapping></ContactSectionOverlapping>
-    <CTASection></CTASection>
-   
+      <Pricing></Pricing>
+      <ContactSectionOverlapping></ContactSectionOverlapping>
+      <CTASection></CTASection>
+
       <Footer></Footer>
-     
+
     </div>
   );
 }

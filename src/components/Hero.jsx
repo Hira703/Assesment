@@ -26,7 +26,7 @@ export default function Hero() {
               </div>
 
               {/* Blue gradient circle overlapped */}
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#0F4E23] rounded-full shadow-lg -ml-10 relative z-0"></div>
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#0F4E23] rounded-full shadow-lg -ml-8 relative z-0"></div>
             </div>
 
             <span>Instant Cash</span>

@@ -1,9 +1,29 @@
 import React from "react";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  Cell,
+} from "recharts";
 import { TrendingUp } from "lucide-react";
 
+const data = [
+  { day: "Sun", value: 40 },
+  { day: "Mon", value: 25 },
+  { day: "Tue", value: 45 },
+  { day: "Wed", value: 40 },
+  { day: "Thu", value: 100 },
+  { day: "Fri", value: 30 },
+  { day: "Sat", value: 60 },
+];
+
 const Chart = () => {
-  // heights in percentage (simulate dynamic data)
-  const data = [40, 25, 45, 40, 100, 30, 60]; 
+  // find the highest sale value
+  const maxValue = Math.max(...data.map((d) => d.value));
 
   return (
     <div className="bg-white rounded-lg p-6 pt-12 w-full max-w-[700px] shadow-sm mx-auto">
@@ -18,33 +38,40 @@ const Chart = () => {
         </div>
       </div>
 
-      {/* Bars */}
-      <div className="relative flex items-end justify-between gap-2 h-[40vh] min-h-[200px] overflow-visible">
-        {data.map((value, idx) => (
-          <div
-            key={idx}
-            className={`flex-1 max-w-[40px] rounded-t ${
-              value === 100 ? "bg-green-900 relative" : "bg-green-200"
-            }`}
-            style={{ height: `${value}%` }}
-          >
-            {/* Tooltip for max bar */}
-            {value === 100 && (
-              <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-yellow-200 px-2 py-1 rounded-lg shadow text-center whitespace-nowrap">
-                <p className="text-xs text-gray-700">Highest sale</p>
-                <p className="font-bold text-gray-900">$2,450</p>
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-
-      {/* Labels */}
-      <div className="flex justify-between mt-3 text-sm text-gray-600">
-        {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
-          <span key={day}>{day}</span>
-        ))}
-      </div>
+      {/* Recharts BarChart */}
+      <ResponsiveContainer width="100%" height={300}>
+        <BarChart
+          data={data}
+          margin={{ top: 0, right: 10, left: 10, bottom: 0 }}
+        >
+          <CartesianGrid vertical={false} horizontal={false} />
+          <XAxis
+            dataKey="day"
+            tickLine={false}
+            axisLine={false}
+            tick={{ fill: "#4B5563", fontSize: 12 }}
+          />
+          <YAxis hide />
+          <Tooltip
+            contentStyle={{
+              backgroundColor: "#FDE68A",
+              borderRadius: "8px",
+              border: "none",
+              padding: "8px",
+            }}
+            labelStyle={{ display: "none" }}
+            formatter={(value) => [`$${value * 24.5}`, "Highest Sale"]}
+          />
+          <Bar dataKey="value" radius={[8, 8, 0, 0]} barSize={40}>
+            {data.map((entry, index) => (
+              <Cell
+                key={`cell-${index}`}
+                fill={entry.value === maxValue ? "#166534" : "#BBF7D0"}
+              />
+            ))}
+          </Bar>
+        </BarChart>
+      </ResponsiveContainer>
     </div>
   );
 };
